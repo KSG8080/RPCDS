@@ -1,3 +1,8 @@
+document.getElementById("simulateBtn").addEventListener("click", function(){
+    simulate();
+    simulateCondition();
+});
+
 var population = 1000;
 var data = [];
 
@@ -19,13 +24,13 @@ function simulate() {
 
 function createPopulation() {
     for (var age = 0; age <= 89; age++) {
-        var peopleWithAge = Math.round(population * ((ageDistribution(age)) / 100));
+        var peopleWithAge = Math.round(population * ((ageDistribution(age) - 0.05) / 100));
         for (var i = 0; i < peopleWithAge; i++) {
             data.push(createPerson(age))
         }
     }
 
-    var peopleWithAge90Plus = Math.round(population * ((ageDistribution(90)) / 100));
+    var peopleWithAge90Plus = Math.round(population * ((ageDistribution(90) - 0.05) / 100));
     for (var k = 0; k < peopleWithAge90Plus; k++) {
         var randomAge90Plus = Math.floor((Math.random() * 20) + 90);
         data.push(createPerson(randomAge90Plus));
@@ -52,6 +57,7 @@ function createPerson(age) {
     person.postcode = "";
     person.CHINumber = 0;
     person.BMI = 0;
+    person.CaR = "N";
 
     return person;
 }

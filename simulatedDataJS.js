@@ -14,6 +14,7 @@ function displayData() {
     html += "<th>Postcode</th>";
     html += "<th>CHI Number</th>";
     html += "<th>BMI</th>";
+    html += "<th>Circulatory & Respiratory</th>";
     html += "</tr>";
 
     for (var i = 0; i < data.length; i++) {
@@ -27,6 +28,7 @@ function displayData() {
         html += "<td>" + data[i].postcode + "</td>";
         html += "<td>" + data[i].CHINumber + "</td>";
         html += "<td>" + data[i].BMI + "</td>";
+        html += "<td>" + data[i].CaR + "</td>";
         html += "</tr>";
     }
 
