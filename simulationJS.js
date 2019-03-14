@@ -13,7 +13,7 @@ function simulate() {
 
     var peopleWithAge90Plus = Math.round(population * ((ageDistribution(90) - 0.05) / 100));
     for (var k = 0; k < peopleWithAge90Plus; k++) {
-        var randomAge90Plus = Math.floor((Math.random() * 110) + 90);
+        var randomAge90Plus = Math.floor((Math.random() * 20) + 90);
         console.log(randomAge90Plus);
         data.push(createPerson(randomAge90Plus));
     }
