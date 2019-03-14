@@ -45,7 +45,7 @@ body {
     position: -webkit-sticky; /* Safari */
     position: sticky;
     top: 0;
-    width: 100vw;
+    width: 100%;
 }
 
 ul {
@@ -74,4 +74,14 @@ li a:hover {
 
 #headerH {
     text-align: center;
+}
+
+table {
+    width: 100%;
+}
+
+table, th, td {
+    text-align: center;
+    border: 1px solid black;
+    border-collapse: collapse;
 }
