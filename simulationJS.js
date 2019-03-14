@@ -1,13 +1,21 @@
 var population = 1000;
-var data = new Array();
+var data = [];
 
 function simulate() {
+    localStorage.clear();
     clearArray();
-    for (var age = 0; age <= 90; age++) {
+    for (var age = 0; age <= 89; age++) {
         var peopleWithAge = Math.round(population * ((ageDistribution(age) - 0.05) / 100));
         for (var i = 0; i < peopleWithAge; i++) {
             data.push(createPerson(age))
         }
+    }
+
+    var peopleWithAge90Plus = Math.round(population * ((ageDistribution(90) - 0.05) / 100));
+    for (var k = 0; k < peopleWithAge90Plus; k++) {
+        var randomAge90Plus = Math.floor((Math.random() * 110) + 90);
+        console.log(randomAge90Plus);
+        data.push(createPerson(randomAge90Plus));
     }
 
     if(data.length < population) {
@@ -19,11 +27,11 @@ function simulate() {
         }
     }
 
-    console.log(data.length);
+    storeData();
 }
 
 function createPerson(age) {
-    var person = new Object();
+    var person = {};
 
     person.firstName = "John";
     person.secondName = "K";
@@ -32,7 +40,6 @@ function createPerson(age) {
     person.postcode = "G21";
     person.CHINumber = 123456789;
     person.BMI = 5.5;
-    person.CirculatoryAndRespiratory = "N";
 
     return person;
 }
@@ -136,7 +143,7 @@ function ageDistribution(age) {
 }
 
 function findObjectByKey(array, key, value) {
-    var results = new Array();
+    var results = [];
 
     for (var i = 0; i < array.length; i++) {
         if (array[i][key] === value) {
@@ -148,6 +155,11 @@ function findObjectByKey(array, key, value) {
 
 function clearArray() {
     data.length = 0;
+}
+
+function storeData() {
+    var JSONData = JSON.stringify(data);
+    localStorage.setItem('StoredData', JSONData);
 }
 
 function applyCirculatoryAndRespiratoryStatistics() {
