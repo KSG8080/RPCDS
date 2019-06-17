@@ -3,15 +3,15 @@ document.getElementById("simulateBtn").addEventListener("click", function(){
     simulateCondition();
 });
 
-var population = 1000;
-var data = [];
+let population = 1000;
+let data = [];
 
 function simulate() {
     localStorage.clear();
     clearArray();
     createPopulation();
 
-    for (var each in data) {
+    for (let each in data) {
         genderDistribution(data[each].age);
     }
 
@@ -23,31 +23,31 @@ function simulate() {
 }
 
 function createPopulation() {
-    for (var age = 0; age <= 89; age++) {
-        var peopleWithAge = Math.round(population * ((ageDistribution(age) - 0.05) / 100));
-        for (var i = 0; i < peopleWithAge; i++) {
+    for (let age = 0; age <= 89; age++) {
+        let peopleWithAge = Math.round(population * ((ageDistribution(age) - 0.05) / 100));
+        for (let i = 0; i < peopleWithAge; i++) {
             data.push(createPerson(age))
         }
     }
 
-    var peopleWithAge90Plus = Math.round(population * ((ageDistribution(90) - 0.05) / 100));
-    for (var k = 0; k < peopleWithAge90Plus; k++) {
-        var randomAge90Plus = Math.floor((Math.random() * 20) + 90);
+    let peopleWithAge90Plus = Math.round(population * ((ageDistribution(90) - 0.05) / 100));
+    for (let k = 0; k < peopleWithAge90Plus; k++) {
+        let randomAge90Plus = Math.floor((Math.random() * 20) + 90);
         data.push(createPerson(randomAge90Plus));
     }
 
     if(data.length < population) {
-        var toSimulate = population - data.length;
+        let toSimulate = population - data.length;
 
-        for (var j = 0; j < toSimulate; j++) {
-            var randomAge = Math.floor((Math.random() * 90));
+        for (let j = 0; j < toSimulate; j++) {
+            let randomAge = Math.floor((Math.random() * 90));
             data.push(createPerson(randomAge))
         }
     }
 }
 
 function createPerson(age) {
-    var person = {};
+    let person = {};
 
     person.firstName = "";
     person.secondName = "";
@@ -63,7 +63,7 @@ function createPerson(age) {
 }
 
 function ageDistribution(age) {
-    var ageDistributionData = [
+    let ageDistributionData = [
         0.99,
         1.03,
         1.05,
@@ -161,9 +161,9 @@ function ageDistribution(age) {
 }
 
 function findObjectByKey(array, key, value) {
-    var results = [];
+    let results = [];
 
-    for (var i = 0; i < array.length; i++) {
+    for (let i = 0; i < array.length; i++) {
         if (array[i][key] === value) {
             results.push(array[i]);
         }
@@ -176,15 +176,15 @@ function clearArray() {
 }
 
 function storeData() {
-    var JSONData = JSON.stringify(data);
+    let JSONData = JSON.stringify(data);
     localStorage.setItem('StoredData', JSONData);
 }
 
 function genderDistribution(age) {
-    var counter = 0;
-    var numberOfFemales = 0;
-    var i = 0;
-    var j = 0;
+    let counter = 0;
+    let numberOfFemales = 0;
+    let i = 0;
+    let j = 0;
 
     if (age <= 89) {
         for (i in data) {
@@ -193,7 +193,7 @@ function genderDistribution(age) {
             }
         }
 
-        var numberOfFemalesTarget = Math.round(counter * (femaleDistribution(age) / 100));
+        let numberOfFemalesTarget = Math.round(counter * (femaleDistribution(age) / 100));
         for (j in data) {
             if (data[j].age === age) {
                 if (numberOfFemales !== numberOfFemalesTarget) {
@@ -206,7 +206,7 @@ function genderDistribution(age) {
 }
 
 function femaleDistribution(age) {
-    var femaleDistributionData = [
+    let femaleDistributionData = [
         48.37,
         48.26,
         48.66,
@@ -304,7 +304,7 @@ function femaleDistribution(age) {
 }
 
 function assignFirstName() {
-    var maleName = ["Allen","Bob","Carlton",
+    let maleName = ["Allen","Bob","Carlton",
         "David","Ernie","Foster",
         "George","Howard","Ian",
         "Jeffery","Kenneth","Lawrence",
@@ -317,7 +317,7 @@ function assignFirstName() {
         "Armand","Jamal","Andrew",
         "Matthew","Mark","Gerald"];
 
-    var femaleName = ["Alice","Bonnie","Cassie",
+    let femaleName = ["Alice","Bonnie","Cassie",
         "Donna","Ethel","Grace",
         "Heather","Jan","Katherine",
         "Julie","Marcia","Patricia",
@@ -331,19 +331,19 @@ function assignFirstName() {
         "Karla","Sandy","Marilyn",
         "Brenda","Hayley","Linda"];
 
-    for (var i in data) {
+    for (let i in data) {
         if (data[i].gender === 'M') {
-            var randomMaleName = Math.floor(Math.random() * maleName.length);
+            let randomMaleName = Math.floor(Math.random() * maleName.length);
             data[i].firstName = maleName[randomMaleName];
         } else if (data[i].gender === 'F') {
-            var randomFemaleName = Math.floor(Math.random() * femaleName.length);
+            let randomFemaleName = Math.floor(Math.random() * femaleName.length);
             data[i].firstName = femaleName[randomFemaleName];
         }
     }
 }
 
 function assignSecondName() {
-    var secondName = ["Adams","Bowden","Conway",
+    let secondName = ["Adams","Bowden","Conway",
         "Darden","Edwards","Flynn",
         "Gilliam","Holiday","Ingram",
         "Johnson","Kraemer","Hunter",
@@ -357,14 +357,14 @@ function assignSecondName() {
         "Anderson","Black","Cavenaugh",
         "Hampton","Jenkins","Prichard"];
 
-    for (var i in data) {
-        var randomSurname = Math.floor(Math.random() * secondName.length);
+    for (let i in data) {
+        let randomSurname = Math.floor(Math.random() * secondName.length);
         data[i].secondName = secondName[randomSurname];
     }
 }
 
 function assignPostcode() {
-    var postcode = ["AB1", "AB2", "AB23", "AB3", "AB30", "AB31", "AB32", "AB33",
+    let postcode = ["AB1", "AB2", "AB23", "AB3", "AB30", "AB31", "AB32", "AB33",
         "AB34", "AB35", "AB36", "AB41", "AB42", "AB43", "AB44", "AB45", "AB51",
         "AB52", "AB53", "AB54", "AB55", "DD10", "DD9", "DD10", "DD11", "DD2", "DD3",
         "DD4", "DD5", "DD7", "DD8", "DD9", "PH11", "PH12", "FK17", "G82", "G83",
@@ -408,8 +408,8 @@ function assignPostcode() {
         "FK8", "FK9", "G63", "EH27", "EH30", "EH47", "EH48", "EH49", "EH52", "EH53", "EH54", "EH55", "HS1",
         "HS2", "HS3", "HS4", "HS5", "HS6", "HS7", "HS8", "HS9"];
 
-    for (var i in data) {
-        var randomPostcode = Math.floor(Math.random() * postcode.length);
+    for (let i in data) {
+        let randomPostcode = Math.floor(Math.random() * postcode.length);
         data[i].postcode = postcode[randomPostcode];
     }
 }

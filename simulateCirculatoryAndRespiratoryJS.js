@@ -1,30 +1,30 @@
-var JSONString = localStorage.getItem('StoredData');
-var data = JSON.parse(JSONString);
+let JSONString = localStorage.getItem('StoredData');
+let data = JSON.parse(JSONString);
 
 function simulateCondition() {
-    var percentageOfMalesAffected = [46, 17, 9, 10, 15, 21, 32, 47, 57];
-    var percentageOfFemalesAffected = [35, 15, 16, 16, 22, 28, 40, 50, 55];
+    let percentageOfMalesAffected = [46, 17, 9, 10, 15, 21, 32, 47, 57];
+    let percentageOfFemalesAffected = [35, 15, 16, 16, 22, 28, 40, 50, 55];
 
     applyStatistics(data, percentageOfMalesAffected, percentageOfFemalesAffected);
 }
 
 function applyStatistics(dataArray, malePercentageArray, femalePercentageArray) {
-    // var maleAgeGroupCount = countMaleAgeGroups();
-    // var femaleAgeGroupCount = countFemaleAgeGroups();
-    // var results = [];
+    // let maleAgeGroupCount = countMaleAgeGroups();
+    // let femaleAgeGroupCount = countFemaleAgeGroups();
+    // let results = [];
     //
-    // for (var i in malePercentageArray) {
-    //     var malesAffected = Math.round(maleAgeGroupCount[i] * (malePercentageArray[i] / 100));
+    // for (let i in malePercentageArray) {
+    //     let malesAffected = Math.round(maleAgeGroupCount[i] * (malePercentageArray[i] / 100));
     // }
     //
     // console.table(results);
 }
 
 function countMaleAgeGroups() {
-    var countedData = [];
-    var counter = 0;
-    var i;
-    var j;
+    let countedData = [];
+    let counter = 0;
+    let i;
+    let j;
 
     for (i in data){
         for (j = 0; j <= 4; j ++){
@@ -126,10 +126,10 @@ function countMaleAgeGroups() {
 }
 
 function countFemaleAgeGroups() {
-    var countedData = [];
-    var counter = 0;
-    var i;
-    var j;
+    let countedData = [];
+    let counter = 0;
+    let i;
+    let j;
 
     for (i in data){
         for (j = 0; j <= 4; j ++){

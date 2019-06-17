@@ -1,10 +1,10 @@
 window.addEventListener('DOMContentLoaded', displayData, false);
 
 function displayData() {
-    var JSONString = localStorage.getItem('StoredData');
-    var data = JSON.parse(JSONString);
+    let JSONString = localStorage.getItem('StoredData');
+    let data = JSON.parse(JSONString);
 
-    var html = "<tr>";
+    let html = "<tr>";
     html += "<th>Index</th>";
     html += "<th>First Name</th>";
     html += "<th>Second Name</th>";
@@ -17,7 +17,7 @@ function displayData() {
     html += "<th>Circulatory & Respiratory</th>";
     html += "</tr>";
 
-    for (var i = 0; i < data.length; i++) {
+    for (let i = 0; i < data.length; i++) {
         html += "<tr>";
         html += "<td>" + i + "</td>";
         html += "<td>" + data[i].firstName + "</td>";
