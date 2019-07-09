@@ -4,10 +4,10 @@ function simulateCnR(data) {
 
 function applyStatistics(data) {
     let percentageOfMalesAffected = [46, 17, 9, 10, 15, 21, 32, 47, 57];
-    let percentageOfFemalesAffected = [35, 15, 16, 16, 22, 28, 40, 50, 55];
+    // let percentageOfFemalesAffected = [35, 15, 16, 16, 22, 28, 40, 50, 55];
     
     maleCnR(data, percentageOfMalesAffected);
-    femaleCnR(data, percentageOfFemalesAffected);
+    // femaleCnR(data, percentageOfFemalesAffected);
 }
 
 function countMaleAgeGroups(data) {
@@ -237,7 +237,7 @@ function maleCnR(data, malePercentageArray) {
         }
     }
 
-    // console.table(mResults);
+    console.table(mResults);
 }
 
 function femaleCnR(data, femalePercentageArray) {
