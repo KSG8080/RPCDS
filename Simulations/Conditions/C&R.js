@@ -1,26 +1,16 @@
-let JSONString = localStorage.getItem('StoredData');
-let data = JSON.parse(JSONString);
+function simulateCnR(data) {
+    applyStatistics(data);
+}
 
-function simulateCondition() {
+function applyStatistics(data) {
     let percentageOfMalesAffected = [46, 17, 9, 10, 15, 21, 32, 47, 57];
     let percentageOfFemalesAffected = [35, 15, 16, 16, 22, 28, 40, 50, 55];
-
-    applyStatistics(data, percentageOfMalesAffected, percentageOfFemalesAffected);
+    
+    maleCnR(data, percentageOfMalesAffected);
+    femaleCnR(data, percentageOfFemalesAffected);
 }
 
-function applyStatistics(dataArray, malePercentageArray, femalePercentageArray) {
-    // let maleAgeGroupCount = countMaleAgeGroups();
-    // let femaleAgeGroupCount = countFemaleAgeGroups();
-    // let results = [];
-    //
-    // for (let i in malePercentageArray) {
-    //     let malesAffected = Math.round(maleAgeGroupCount[i] * (malePercentageArray[i] / 100));
-    // }
-    //
-    // console.table(results);
-}
-
-function countMaleAgeGroups() {
+function countMaleAgeGroups(data) {
     let countedData = [];
     let counter = 0;
     let i;
@@ -125,7 +115,7 @@ function countMaleAgeGroups() {
     return countedData;
 }
 
-function countFemaleAgeGroups() {
+function countFemaleAgeGroups(data) {
     let countedData = [];
     let counter = 0;
     let i;
@@ -228,4 +218,44 @@ function countFemaleAgeGroups() {
     countedData.push(counter);
 
     return countedData;
+}
+
+function maleCnR(data, malePercentageArray) {
+    let maleAgeGroupCount = countMaleAgeGroups(data);
+    let mResults = [];
+
+    for (let i in malePercentageArray) {
+        let malesAffected = Math.round(maleAgeGroupCount[i] * (malePercentageArray[i] / 100));
+        mResults.push(malesAffected);
+    }
+
+    for (i in data){
+        for (j = 0; j <= 4; j ++){
+            if (data[i].age === j && data[i].gender === 'M') {
+                data[i].CaR = "Y";
+            }
+        }
+    }
+
+    // console.table(mResults);
+}
+
+function femaleCnR(data, femalePercentageArray) {
+    let femaleAgeGroupCount = countFemaleAgeGroups(data);
+    let fResults = [];
+
+    for (let i in femalePercentageArray) {
+        femalesAffected = Math.round(femaleAgeGroupCount[i] * (femalePercentageArray[i] / 100));
+        fResults.push(femalesAffected);
+    }
+
+    for (i in data){
+        for (j = 0; j <= 4; j ++){
+            if (data[i].age === j && data[i].gender === 'F') {
+                data[i].CaR = "Y";
+            }
+        }
+    }
+
+    // console.table(fResults);
 }
