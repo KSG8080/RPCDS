@@ -223,6 +223,7 @@ function countFemaleAgeGroups(data) {
 function maleCnR(data, malePercentageArray) {
     let maleAgeGroupCount = countMaleAgeGroups(data);
     let mResults = [];
+    let counter = 0;
 
     for (let i in malePercentageArray) {
         let malesAffected = Math.round(maleAgeGroupCount[i] * (malePercentageArray[i] / 100));
@@ -232,11 +233,18 @@ function maleCnR(data, malePercentageArray) {
     for (i in data){
         for (j = 0; j <= 4; j ++){
             if (data[i].age === j && data[i].gender === 'M') {
-                data[i].CaR = "Y";
+                if(counter !== mResults[0]) {
+                    data[i].CaR = "Y";
+                    counter++;
+                } else {
+                    break;
+                }
             }
         }
     }
 
+    console.log("Number at pos 0: " + mResults[0]);
+    console.log("Counter: " + counter);
     console.table(mResults);
 }
 

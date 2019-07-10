@@ -1,3 +1,5 @@
+window.addEventListener('DOMContentLoaded', dataCount, false);
+
 var ctx = document.getElementById('myChart').getContext('2d');
 var myChart = new Chart(ctx, {
     type: 'bar',
@@ -5,7 +7,7 @@ var myChart = new Chart(ctx, {
         labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
         datasets: [{
             label: '# of Votes',
-            data: [12, 19, 3, 5, 2, 3],
+            data: [dataCount(0,4), 19, 3, 5, 2, 3],
             backgroundColor: [
                 'rgba(255, 99, 132, 0.2)',
                 'rgba(54, 162, 235, 0.2)',
@@ -35,3 +37,18 @@ var myChart = new Chart(ctx, {
         }
     }
 });
+
+function dataCount(min, max) {
+    var data = JSON.parse(localStorage.getItem('StoredData'))
+    var counter = 0;
+
+    for (i in data){
+        for (j = min; j <= max; j ++){
+            if (data[i].age === j && data[i].gender === 'M' && data[i].CaR === 'Y') {
+                counter++;
+            }
+        }
+    }
+
+    return counter;
+}
