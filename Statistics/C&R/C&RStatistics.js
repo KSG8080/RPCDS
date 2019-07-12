@@ -4,26 +4,16 @@ var ctx = document.getElementById('myChart').getContext('2d');
 var myChart = new Chart(ctx, {
     type: 'bar',
     data: {
-        labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+        labels: ['0 - 4', '5 - 14', '15 - 24', '25 - 34', '35 - 44', '45 - 54', '55 - 64', '65 - 74', '75 & Over'],
         datasets: [{
-            label: '# of Votes',
-            data: [dataCount(0,4), 19, 3, 5, 2, 3],
-            backgroundColor: [
-                'rgba(255, 99, 132, 0.2)',
-                'rgba(54, 162, 235, 0.2)',
-                'rgba(255, 206, 86, 0.2)',
-                'rgba(75, 192, 192, 0.2)',
-                'rgba(153, 102, 255, 0.2)',
-                'rgba(255, 159, 64, 0.2)'
-            ],
-            borderColor: [
-                'rgba(255, 99, 132, 1)',
-                'rgba(54, 162, 235, 1)',
-                'rgba(255, 206, 86, 1)',
-                'rgba(75, 192, 192, 1)',
-                'rgba(153, 102, 255, 1)',
-                'rgba(255, 159, 64, 1)'
-            ],
+            label: '# of Males',
+            data: [dataCount(0,4), 19, 3, 5, 2, 3, 5, 8, 10],
+            backgroundColor: "#3e95cd",
+            borderWidth: 1
+        }, {
+            label: '# of Females',
+            data: [dataCount(0,4), 2, 4, 6, 8, 10, 12, 14, 16],
+            backgroundColor: "#8e5ea2",
             borderWidth: 1
         }]
     },
@@ -32,7 +22,17 @@ var myChart = new Chart(ctx, {
             yAxes: [{
                 ticks: {
                     beginAtZero: true
-                }
+                },
+                scaleLabel: {
+                    display: true,
+                    labelString: "# of People affected by the condition"
+                  }
+            }],
+            xAxes: [{
+                scaleLabel: {
+                    display: true,
+                    labelString: "Age Groups"
+                  }
             }]
         }
     }
