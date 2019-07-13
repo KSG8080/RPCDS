@@ -16,6 +16,7 @@ function simulate() {
 
     assignFirstName(dataSet);
     assignSecondName(dataSet);
+    assignDoB(dataSet);
     assignPostcode(dataSet);
     simulateCnR(dataSet);
     storeData(dataSet);
