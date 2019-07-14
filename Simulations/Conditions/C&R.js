@@ -5,7 +5,7 @@ function simulateCnR(data) {
 function applyStatistics(data) {
     let percentageOfMalesAffected = [46, 17, 9, 10, 15, 21, 32, 47, 57];
     // let percentageOfFemalesAffected = [35, 15, 16, 16, 22, 28, 40, 50, 55];
-    
+
     maleCnR(data, percentageOfMalesAffected);
     // femaleCnR(data, percentageOfFemalesAffected);
 }
@@ -16,8 +16,8 @@ function countMaleAgeGroups(data) {
     let i;
     let j;
 
-    for (i in data){
-        for (j = 0; j <= 4; j ++){
+    for (i in data) {
+        for (j = 0; j <= 4; j++) {
             if (data[i].age === j && data[i].gender === 'M') {
                 counter++;
             }
@@ -27,8 +27,8 @@ function countMaleAgeGroups(data) {
     countedData.push(counter);
     counter = 0;
 
-    for (i in data){
-        for (j = 5; j <= 14; j ++){
+    for (i in data) {
+        for (j = 5; j <= 14; j++) {
             if (data[i].age === j && data[i].gender === 'M') {
                 counter++;
             }
@@ -38,8 +38,8 @@ function countMaleAgeGroups(data) {
     countedData.push(counter);
     counter = 0;
 
-    for (i in data){
-        for (j = 15; j <= 24; j ++){
+    for (i in data) {
+        for (j = 15; j <= 24; j++) {
             if (data[i].age === j && data[i].gender === 'M') {
                 counter++;
             }
@@ -49,8 +49,8 @@ function countMaleAgeGroups(data) {
     countedData.push(counter);
     counter = 0;
 
-    for (i in data){
-        for (j = 25; j <= 34; j ++){
+    for (i in data) {
+        for (j = 25; j <= 34; j++) {
             if (data[i].age === j && data[i].gender === 'M') {
                 counter++;
             }
@@ -60,8 +60,8 @@ function countMaleAgeGroups(data) {
     countedData.push(counter);
     counter = 0;
 
-    for (i in data){
-        for (j = 35; j <= 44; j ++){
+    for (i in data) {
+        for (j = 35; j <= 44; j++) {
             if (data[i].age === j && data[i].gender === 'M') {
                 counter++;
             }
@@ -71,8 +71,8 @@ function countMaleAgeGroups(data) {
     countedData.push(counter);
     counter = 0;
 
-    for (i in data){
-        for (j = 45; j <= 54; j ++){
+    for (i in data) {
+        for (j = 45; j <= 54; j++) {
             if (data[i].age === j && data[i].gender === 'M') {
                 counter++;
             }
@@ -82,8 +82,8 @@ function countMaleAgeGroups(data) {
     countedData.push(counter);
     counter = 0;
 
-    for (i in data){
-        for (j = 55; j <= 64; j ++){
+    for (i in data) {
+        for (j = 55; j <= 64; j++) {
             if (data[i].age === j && data[i].gender === 'M') {
                 counter++;
             }
@@ -93,8 +93,8 @@ function countMaleAgeGroups(data) {
     countedData.push(counter);
     counter = 0;
 
-    for (i in data){
-        for (j = 65; j <= 74; j ++){
+    for (i in data) {
+        for (j = 65; j <= 74; j++) {
             if (data[i].age === j && data[i].gender === 'M') {
                 counter++;
             }
@@ -104,7 +104,7 @@ function countMaleAgeGroups(data) {
     countedData.push(counter);
     counter = 0;
 
-    for (i in data){
+    for (i in data) {
         if (data[i].age >= 75 && data[i].gender === 'M') {
             counter++;
         }
@@ -121,8 +121,8 @@ function countFemaleAgeGroups(data) {
     let i;
     let j;
 
-    for (i in data){
-        for (j = 0; j <= 4; j ++){
+    for (i in data) {
+        for (j = 0; j <= 4; j++) {
             if (data[i].age === j && data[i].gender === 'F') {
                 counter++;
             }
@@ -132,8 +132,8 @@ function countFemaleAgeGroups(data) {
     countedData.push(counter);
     counter = 0;
 
-    for (i in data){
-        for (j = 5; j <= 14; j ++){
+    for (i in data) {
+        for (j = 5; j <= 14; j++) {
             if (data[i].age === j && data[i].gender === 'F') {
                 counter++;
             }
@@ -143,8 +143,8 @@ function countFemaleAgeGroups(data) {
     countedData.push(counter);
     counter = 0;
 
-    for (i in data){
-        for (j = 15; j <= 24; j ++){
+    for (i in data) {
+        for (j = 15; j <= 24; j++) {
             if (data[i].age === j && data[i].gender === 'F') {
                 counter++;
             }
@@ -154,8 +154,8 @@ function countFemaleAgeGroups(data) {
     countedData.push(counter);
     counter = 0;
 
-    for (i in data){
-        for (j = 25; j <= 34; j ++){
+    for (i in data) {
+        for (j = 25; j <= 34; j++) {
             if (data[i].age === j && data[i].gender === 'F') {
                 counter++;
             }
@@ -165,8 +165,8 @@ function countFemaleAgeGroups(data) {
     countedData.push(counter);
     counter = 0;
 
-    for (i in data){
-        for (j = 35; j <= 44; j ++){
+    for (i in data) {
+        for (j = 35; j <= 44; j++) {
             if (data[i].age === j && data[i].gender === 'F') {
                 counter++;
             }
@@ -176,8 +176,8 @@ function countFemaleAgeGroups(data) {
     countedData.push(counter);
     counter = 0;
 
-    for (i in data){
-        for (j = 45; j <= 54; j ++){
+    for (i in data) {
+        for (j = 45; j <= 54; j++) {
             if (data[i].age === j && data[i].gender === 'F') {
                 counter++;
             }
@@ -187,8 +187,8 @@ function countFemaleAgeGroups(data) {
     countedData.push(counter);
     counter = 0;
 
-    for (i in data){
-        for (j = 55; j <= 64; j ++){
+    for (i in data) {
+        for (j = 55; j <= 64; j++) {
             if (data[i].age === j && data[i].gender === 'F') {
                 counter++;
             }
@@ -198,8 +198,8 @@ function countFemaleAgeGroups(data) {
     countedData.push(counter);
     counter = 0;
 
-    for (i in data){
-        for (j = 65; j <= 74; j ++){
+    for (i in data) {
+        for (j = 65; j <= 74; j++) {
             if (data[i].age === j && data[i].gender === 'F') {
                 counter++;
             }
@@ -209,7 +209,7 @@ function countFemaleAgeGroups(data) {
     countedData.push(counter);
     counter = 0;
 
-    for (i in data){
+    for (i in data) {
         if (data[i].age >= 75 && data[i].gender === 'F') {
             counter++;
         }
@@ -223,29 +223,41 @@ function countFemaleAgeGroups(data) {
 function maleCnR(data, malePercentageArray) {
     let maleAgeGroupCount = countMaleAgeGroups(data);
     let mResults = [];
+    let index = [];
     let counter = 0;
+    let test = [];
 
     for (let i in malePercentageArray) {
         let malesAffected = Math.round(maleAgeGroupCount[i] * (malePercentageArray[i] / 100));
         mResults.push(malesAffected);
     }
 
-    for (i in data){
-        for (j = 0; j <= 4; j ++){
+    for (let i in data) {
+        for (j = 0; j <= 4; j++) {
             if (data[i].age === j && data[i].gender === 'M') {
-                if(counter !== mResults[0]) {
-                    data[i].CaR = "Y";
-                    counter++;
-                } else {
-                    break;
-                }
+                index.push(i);
             }
         }
     }
 
+    for (let i in index) {
+        let random = index[Math.floor(Math.random() * index.length)];
+
+        if (counter !== mResults[0]) {
+            data[random].CaR = "Y";
+            test.push(data[random].CHINumber);
+            counter++;
+        } else {
+            break;
+        }
+    }
+
+    // console.log(index);
+    // console.log(index.length);
     console.log("Number at pos 0: " + mResults[0]);
     console.log("Counter: " + counter);
-    console.table(mResults);
+    console.table(test);
+    // console.table(mResults);
 }
 
 function femaleCnR(data, femalePercentageArray) {
@@ -257,8 +269,8 @@ function femaleCnR(data, femalePercentageArray) {
         fResults.push(femalesAffected);
     }
 
-    for (i in data){
-        for (j = 0; j <= 4; j ++){
+    for (i in data) {
+        for (j = 0; j <= 4; j++) {
             if (data[i].age === j && data[i].gender === 'F') {
                 data[i].CaR = "Y";
             }
