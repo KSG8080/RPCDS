@@ -20,5 +20,6 @@ function assignDeprevation(data) {
             data[i].SIMD16_Rank = JSONString[random].SIMD16_Rank;
             storeData(data);
         }
+        window.alert("Data simulation has been complete!");
     });
 }
