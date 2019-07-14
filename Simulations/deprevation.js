@@ -21,5 +21,7 @@ function assignDeprevation(data) {
             storeData(data);
         }
         window.alert("Data simulation has been complete!");
+        let textLabel = document.getElementById('wait');
+        textLabel.textContent = "Complete!";
     });
 }

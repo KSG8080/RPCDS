@@ -1,4 +1,6 @@
 document.getElementById("simulateBtn").addEventListener("click", function(){
+    let textLabel = document.getElementById('wait');
+    textLabel.textContent = "Please wait...";
     simulate();
 });
 
