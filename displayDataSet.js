@@ -12,6 +12,7 @@ function displayData() {
     html += "<th>Age</th>";
     html += "<th>Date of Birth</th>";
     html += "<th>Postcode</th>";
+    html += "<th>SIMD16 Rank</th>";
     html += "<th>BMI</th>";
     html += "<th>Circulatory & Respiratory</th>";
     html += "</tr>";
@@ -25,6 +26,7 @@ function displayData() {
         html += "<td>" + data[i].age + "</td>";
         html += "<td>" + data[i].DoB + "</td>";
         html += "<td>" + data[i].postcode + "</td>";
+        html += "<td>" + data[i].SIMD16_Rank + "</td>";
         html += "<td>" + data[i].BMI + "</td>";
         html += "<td>" + data[i].CaR + "</td>";
         html += "</tr>";

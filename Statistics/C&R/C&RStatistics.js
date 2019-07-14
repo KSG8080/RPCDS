@@ -67,15 +67,16 @@ function displayData() {
     let data = JSON.parse(JSONString);
 
     let html = "<tr>";
-    html += "<th onclick=\"sortTable(0)\">CHI Number</th>";
-    html += "<th onclick=\"sortTable(1)\">First Name</th>";
-    html += "<th onclick=\"sortTable(2)\">Second Name</th>";
-    html += "<th onclick=\"sortTable(3)\">Gender</th>";
-    html += "<th onclick=\"sortTable(4)\">Age</th>";
-    html += "<th onclick=\"sortTable(5)\">Date of Birth</th>";
-    html += "<th onclick=\"sortTable(6)\">Postcode</th>";
-    html += "<th onclick=\"sortTable(7)\">BMI</th>";
-    html += "<th onclick=\"sortTable(8)\">Circulatory & Respiratory</th>";
+    html += "<th>CHI Number</th>";
+    html += "<th>First Name</th>";
+    html += "<th>Second Name</th>";
+    html += "<th>Gender</th>";
+    html += "<th>Age</th>";
+    html += "<th>Date of Birth</th>";
+    html += "<th>Postcode</th>";
+    html += "<th>SIMD16 Rank</th>";
+    html += "<th>BMI</th>";
+    html += "<th>Circulatory & Respiratory</th>";
     html += "</tr>";
 
     for (let i in data) {
@@ -88,6 +89,7 @@ function displayData() {
             html += "<td>" + data[i].age + "</td>";
             html += "<td>" + data[i].DoB + "</td>";
             html += "<td>" + data[i].postcode + "</td>";
+            html += "<td>" + data[i].SIMD16_Rank + "</td>";
             html += "<td>" + data[i].BMI + "</td>";
             html += "<td>" + data[i].CaR + "</td>";
             html += "</tr>";
