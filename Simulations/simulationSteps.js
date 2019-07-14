@@ -20,6 +20,7 @@ function simulate() {
     assignSecondName(dataSet);
     assignDoB(dataSet);
     assignCHI(dataSet);
+    simulateBMI(dataSet);
     assignDeprevation(dataSet);
     simulateCnR(dataSet);
     storeData(dataSet);

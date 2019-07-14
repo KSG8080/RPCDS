@@ -33,7 +33,7 @@ function createPerson(age) {
     person.postcode = "";
     person.SIMD16_Rank = "";
     person.CHINumber = 0;
-    person.BMI = 0;
+    person.BMI = "N/A";
     person.CaR = "N";
 
     return person;
