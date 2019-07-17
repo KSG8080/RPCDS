@@ -6,16 +6,26 @@ function displayData() {
 
     var gridOptions = {
         columnDefs: [
-            {headerName: 'CHI Number', field: 'CHINumber'},
-            {headerName: 'First Name', field: 'firstName'},
-            {headerName: 'Second Name', field: 'secondName'},
-            {headerName: 'Gender', field: 'gender'},
-            {headerName: 'Age', field: 'age'},
-            {headerName: 'Date of Birth', field: 'DoB'},
-            {headerName: 'Postcode', field: 'postcode'},
-            {headerName: 'SIMD16 Rank', field: 'SIMD16_Rank'},
-            {headerName: 'BMI', field: 'BMI'},
-            {headerName: 'Circulatory & Respiratory', field: 'CaR'}
+            {
+                headerName: 'Patient Details',
+                children: [
+                    { headerName: 'CHI Number', field: 'CHINumber', sortable: true, filter: true },
+                    { headerName: 'First Name', field: 'firstName', sortable: true, filter: true },
+                    { headerName: 'Second Name', field: 'secondName', sortable: true, filter: true },
+                    { headerName: 'Gender', field: 'gender', sortable: true, filter: true },
+                    { headerName: 'Age', field: 'age', sortable: true, filter: 'number'},
+                    { headerName: 'Date of Birth', field: 'DoB', sortable: true, filter: 'date'},
+                    { headerName: 'Postcode', field: 'postcode', sortable: true, filter: true },
+                    { headerName: 'SIMD16 Rank', field: 'SIMD16_Rank', sortable: true, filter: true },
+                    { headerName: 'BMI', field: 'BMI', sortable: true, filter: true }
+                ]
+            },
+            {
+                headerName: 'Conditions',
+                children: [
+                    { headerName: 'Circulatory & Respiratory', field: 'CaR', sortable: true, filter: true }
+                ]
+            }
         ]
     };
 
@@ -26,4 +36,10 @@ function displayData() {
     new agGrid.Grid(eGridDiv, gridOptions);
 
     gridOptions.api.setRowData(data);
+
+    var allColumnIds = [];
+    gridOptions.columnApi.getAllColumns().forEach(function (column) {
+        allColumnIds.push(column.colId);
+    });
+    gridOptions.columnApi.autoSizeColumns(allColumnIds);
 }
