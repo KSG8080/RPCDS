@@ -3,9 +3,9 @@ function simulateHT(data) {
 }
 
 function applyHTStatistics(data) {
-    let ageGroups = [0, 34, 35, 54, 55, 64, 65, 74, 75, 200];
-    let percentageOfMalesAffected = [0, 46, 60, 69, 66];
-    let percentageOfFemalesAffected = [0, 44, 61, 66, 73];
+    let ageGroups = [35, 54, 55, 64, 65, 74, 75, 200];
+    let percentageOfMalesAffected = [46, 60, 69, 66];
+    let percentageOfFemalesAffected = [44, 61, 66, 73];
 
     maleHTStatistics(data, percentageOfMalesAffected, ageGroups);
     femaleHTStatistics(data, percentageOfFemalesAffected, ageGroups);

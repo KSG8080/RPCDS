@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1.0" />
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <link rel="stylesheet" type="text/css" href="../../normalize.css" />
+    <link rel="stylesheet" type="text/css" href="../../mainCSS.css" />
+
+    <title>dtools: Home</title>
+</head>
+
+<body onload="getFooter()">
+    <div class="header">
+        <a href="../../home.html" class="logo">dtools</a>
+        <div class="header-right">
+            <a href="../../home.html">Home</a>
+            <a class="active" href="../../statistics.html">Statistics</a>
+            <a href="../../simulatedData.html">Simulated Data</a>
+            <a href="../../sources.html">Data Sources</a>
+        </div>
+    </div>
+
+    <div>
+        <h1 style="text-align: center">Hypertension Statistics</h1>
+    </div>
+
+    <div id="main">
+        <main>
+            <canvas id="myChart" width="100" height="25"></canvas>
+        </main>
+    </div>
+
+    <div>
+        <button id="btnAutoSize">Auto-Size Columns</button> 
+        <!-- <button id="btnExportCSV">Export to CSV</button> -->
+    </div>
+
+    <div id="myGrid" style="height: 30rem; width:100%;" class="ag-theme-blue"></div>
+
+    </br>
+    <div id="footerBar">
+        <footer id="footer"></footer>
+    </div>
+</body>
+
+<script src="../../footerJS.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+<script src="https://unpkg.com/ag-grid-community@21.0.1/dist/ag-grid-community.min.js"></script>
+<script src="HTStatistics.js"></script>
+
+</html>
