@@ -53,7 +53,7 @@ function dataCount(min, max, Gender) {
 
     for (i in data) {
         for (j = min; j <= max; j++) {
-            if (data[i].age === j && data[i].gender === Gender && data[i].CaR === 'Y') {
+            if (data[i].age === j && data[i].gender === Gender && data[i].DotSaST === 'Y') {
                 counter++;
             }
         }

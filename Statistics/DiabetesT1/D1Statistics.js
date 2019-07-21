@@ -10,15 +10,15 @@ function chart() {
     var myChart = new Chart(ctx, {
         type: 'bar',
         data: {
-            labels: ['0 - 4', '5 - 14', '15 - 24', '25 - 34', '35 - 44', '45 - 54', '55 - 64', '65 - 74', '75 & Over'],
+            labels: ['0 - 9', '10 - 19', '20 - 29', '30 - 39', '40 - 49', '50 - 59', '60 - 69', '70 - 79', '80 & Over'],
             datasets: [{
                 label: '# of Males',
-                data: [dataCount(0, 4, 'M'), dataCount(5, 14, 'M'), dataCount(15, 24, 'M'), dataCount(25, 34, 'M'), dataCount(35, 44, 'M'), dataCount(45, 54, 'M'), dataCount(55, 64, 'M'), dataCount(65, 74, 'M'), dataCount(75, 200, 'M')],
+                data: [dataCount(0, 9, 'M'), dataCount(10, 19, 'M'), dataCount(20, 29, 'M'), dataCount(30, 39, 'M'), dataCount(40, 49, 'M'), dataCount(50, 59, 'M'), dataCount(60, 69, 'M'), dataCount(70, 79, 'M'), dataCount(80, 200, 'M')],
                 backgroundColor: "#3e95cd",
                 borderWidth: 1
             }, {
                 label: '# of Females',
-                data: [dataCount(0, 4, 'F'), dataCount(5, 14, 'F'), dataCount(15, 24, 'F'), dataCount(25, 34, 'F'), dataCount(35, 44, 'F'), dataCount(45, 54, 'F'), dataCount(55, 64, 'F'), dataCount(65, 74, 'F'), dataCount(75, 200, 'F')],
+                data: [dataCount(0, 9, 'F'), dataCount(10, 19, 'F'), dataCount(20, 29, 'F'), dataCount(30, 39, 'F'), dataCount(40, 49, 'F'), dataCount(50, 59, 'F'), dataCount(60, 69, 'F'), dataCount(70, 79, 'F'), dataCount(80, 200, 'F')],
                 backgroundColor: "#8e5ea2",
                 borderWidth: 1
             }]
@@ -53,7 +53,7 @@ function dataCount(min, max, Gender) {
 
     for (i in data) {
         for (j = min; j <= max; j++) {
-            if (data[i].age === j && data[i].gender === Gender && data[i].DA === 'Y') {
+            if (data[i].age === j && data[i].gender === Gender && data[i].Di1 === 'Y') {
                 counter++;
             }
         }
@@ -68,7 +68,7 @@ function displayDAData() {
     let statistics = [];
 
     for (i in data) {
-        if (data[i].DA === "Y") {
+        if (data[i].Di1 === "Y") {
             statistics.push(data[i]);
         }
     }
