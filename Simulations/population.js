@@ -35,6 +35,7 @@ function createPerson(age) {
     person.CHINumber = 0;
     person.BMI = "N/A";
     person.CaR = "N";
+    person.DotSaST = "N";
 
     return person;
 }

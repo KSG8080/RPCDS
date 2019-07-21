@@ -23,6 +23,7 @@ function simulate() {
     simulateBMI(dataSet);
     assignDeprevation(dataSet);
     simulateCnR(dataSet);
+    simulateDotSnST(dataSet);
     storeData(dataSet);
 
     console.log(dataSet.length);

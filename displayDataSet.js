@@ -23,7 +23,8 @@ function displayData() {
             {
                 headerName: 'Conditions',
                 children: [
-                    { headerName: 'Circulatory & Respiratory', field: 'CaR', sortable: true, filter: true }
+                    { headerName: 'Circulatory & Respiratory', field: 'CaR', sortable: true, filter: true },
+                    { headerName: 'Diseases of the Skin & Subcutaneous Tissue', field: 'DotSaST', sortable: true, filter: true }
                 ]
             }
         ]
