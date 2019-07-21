@@ -16,7 +16,7 @@ function createPopulation(population, data) {
         let toSimulate = population - data.length;
 
         for (let j = 0; j < toSimulate; j++) {
-            let randomAge = Math.floor((Math.random() * 100));
+            let randomAge = Math.floor((Math.random() * 140));
             data.push(createPerson(randomAge))
         }
     }
