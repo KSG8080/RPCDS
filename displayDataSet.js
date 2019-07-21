@@ -24,7 +24,12 @@ function displayData() {
                 headerName: 'Conditions',
                 children: [
                     { headerName: 'Circulatory & Respiratory', field: 'CaR', sortable: true, filter: true },
-                    { headerName: 'Diseases of the Skin & Subcutaneous Tissue', field: 'DotSaST', sortable: true, filter: true }
+                    { headerName: 'Diseases of the Skin & Subcutaneous Tissue', field: 'DotSaST', sortable: true, filter: true },
+                    { headerName: 'General Abnormal', field: 'GA', sortable: true, filter: true },
+                    { headerName: 'Digestive & Abdominal', field: 'DA', sortable: true, filter: true },
+                    { headerName: 'Diabetes Type 1', field: 'Di1', sortable: true, filter: true },
+                    { headerName: 'Diabetes Type 2', field: 'Di2', sortable: true, filter: true },
+                    { headerName: 'Hypertension', field: 'HT', sortable: true, filter: true },
                 ]
             }
         ]

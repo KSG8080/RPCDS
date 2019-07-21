@@ -82,8 +82,8 @@ function displayCnRData() {
                     { headerName: 'First Name', field: 'firstName', sortable: true, filter: true },
                     { headerName: 'Second Name', field: 'secondName', sortable: true, filter: true },
                     { headerName: 'Gender', field: 'gender', sortable: true, filter: true },
-                    { headerName: 'Age', field: 'age', sortable: true, filter: 'number'},
-                    { headerName: 'Date of Birth', field: 'DoB', sortable: true, filter: 'date'},
+                    { headerName: 'Age', field: 'age', sortable: true, filter: 'number' },
+                    { headerName: 'Date of Birth', field: 'DoB', sortable: true, filter: 'date' },
                     { headerName: 'Postcode', field: 'postcode', sortable: true, filter: true },
                     { headerName: 'SIMD16 Rank', field: 'SIMD16_Rank', sortable: true, filter: true },
                     { headerName: 'BMI', field: 'BMI', sortable: true, filter: true }
@@ -93,7 +93,12 @@ function displayCnRData() {
                 headerName: 'Conditions',
                 children: [
                     { headerName: 'Circulatory & Respiratory', field: 'CaR', sortable: true, filter: true },
-                    { headerName: 'Diseases of the Skin & Subcutaneous Tissue', field: 'DotSaST', sortable: true, filter: true }
+                    { headerName: 'Diseases of the Skin & Subcutaneous Tissue', field: 'DotSaST', sortable: true, filter: true },
+                    { headerName: 'General Abnormal', field: 'GA', sortable: true, filter: true },
+                    { headerName: 'Digestive & Abdominal', field: 'DA', sortable: true, filter: true },
+                    { headerName: 'Diabetes Type 1', field: 'Di1', sortable: true, filter: true },
+                    { headerName: 'Diabetes Type 2', field: 'Di2', sortable: true, filter: true },
+                    { headerName: 'Hypertension', field: 'HT', sortable: true, filter: true },
                 ]
             }
         ]

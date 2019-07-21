@@ -36,6 +36,11 @@ function createPerson(age) {
     person.BMI = "N/A";
     person.CaR = "N";
     person.DotSaST = "N";
+    person.GA = "N";
+    person.DA = "N";
+    person.Di1 = "N";
+    person.Di2 = "N";
+    person.HT = "N";
 
     return person;
 }
