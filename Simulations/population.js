@@ -8,7 +8,7 @@ function createPopulation(population, data) {
 
     let peopleWithAge90Plus = Math.round(population * ((ageDistribution(90) - 0.01) / 100));
     for (let k = 0; k < peopleWithAge90Plus; k++) {
-        let randomAge90Plus = Math.floor((Math.random() * 20) + 90);
+        let randomAge90Plus = Math.floor(Math.random() * (140 - 90 + 1)) + 90;
         data.push(createPerson(randomAge90Plus));
     }
 
@@ -16,7 +16,7 @@ function createPopulation(population, data) {
         let toSimulate = population - data.length;
 
         for (let j = 0; j < toSimulate; j++) {
-            let randomAge = Math.floor((Math.random() * 90));
+            let randomAge = Math.floor((Math.random() * 100));
             data.push(createPerson(randomAge))
         }
     }
