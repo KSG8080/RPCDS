@@ -24,6 +24,8 @@ function simulate() {
     assignDeprevation(dataSet);
     simulateCnR(dataSet);
     storeData(dataSet);
+
+    console.log(dataSet.length);
 }
 
 function findDataByKey(data, key, value) {

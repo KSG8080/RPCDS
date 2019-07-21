@@ -106,9 +106,19 @@ function displayCnRData() {
 
     gridOptions.api.setRowData(statistics);
 
-    var allColumnIds = [];
-    gridOptions.columnApi.getAllColumns().forEach(function (column) {
-        allColumnIds.push(column.colId);
+    document.querySelector('#btnAutoSize').addEventListener('click', function () {
+        var allColumnIds = [];
+        gridOptions.columnApi.getAllColumns().forEach(function (column) {
+            allColumnIds.push(column.colId);
+        });
+        gridOptions.columnApi.autoSizeColumns(allColumnIds);
     });
-    gridOptions.columnApi.autoSizeColumns(allColumnIds);
+
+    // document.querySelector('#btnExportCSV').addEventListener('click', function () {
+    //     var params = {
+    //         fileName: 'C&R Simulated Data',
+    //     };
+    
+    //     gridOptions.api.exportDataAsCsv(params);
+    // });
 }

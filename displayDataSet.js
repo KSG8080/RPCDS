@@ -13,8 +13,8 @@ function displayData() {
                     { headerName: 'First Name', field: 'firstName', sortable: true, filter: true },
                     { headerName: 'Second Name', field: 'secondName', sortable: true, filter: true },
                     { headerName: 'Gender', field: 'gender', sortable: true, filter: true },
-                    { headerName: 'Age', field: 'age', sortable: true, filter: 'number'},
-                    { headerName: 'Date of Birth', field: 'DoB', sortable: true, filter: 'date'},
+                    { headerName: 'Age', field: 'age', sortable: true, filter: 'number' },
+                    { headerName: 'Date of Birth', field: 'DoB', sortable: true, filter: 'date' },
                     { headerName: 'Postcode', field: 'postcode', sortable: true, filter: true },
                     { headerName: 'SIMD16 Rank', field: 'SIMD16_Rank', sortable: true, filter: true },
                     { headerName: 'BMI', field: 'BMI', sortable: true, filter: true }
@@ -37,9 +37,19 @@ function displayData() {
 
     gridOptions.api.setRowData(data);
 
-    var allColumnIds = [];
-    gridOptions.columnApi.getAllColumns().forEach(function (column) {
-        allColumnIds.push(column.colId);
+    document.querySelector('#btnAutoSize').addEventListener('click', function () {
+        var allColumnIds = [];
+        gridOptions.columnApi.getAllColumns().forEach(function (column) {
+            allColumnIds.push(column.colId);
+        });
+        gridOptions.columnApi.autoSizeColumns(allColumnIds);
     });
-    gridOptions.columnApi.autoSizeColumns(allColumnIds);
+
+    // document.querySelector('#btnExportCSV').addEventListener('click', function () {
+    //     var params = {
+    //         fileName: 'Full Simulated Data'
+    //     };
+    
+    //     gridOptions.api.exportDataAsCsv(params);
+    // });
 }
