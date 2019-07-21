@@ -29,7 +29,7 @@ function displayData() {
                     { headerName: 'Digestive & Abdominal', field: 'DA', sortable: true, filter: true },
                     { headerName: 'Diabetes Type 1', field: 'Di1', sortable: true, filter: true },
                     { headerName: 'Diabetes Type 2', field: 'Di2', sortable: true, filter: true },
-                    { headerName: 'Hypertension', field: 'HT', sortable: true, filter: true },
+                    { headerName: 'Hypertension', field: 'HT', sortable: true, filter: true }
                 ]
             }
         ]
@@ -43,19 +43,17 @@ function displayData() {
 
     gridOptions.api.setRowData(data);
 
-    document.querySelector('#btnAutoSize').addEventListener('click', function () {
-        var allColumnIds = [];
-        gridOptions.columnApi.getAllColumns().forEach(function (column) {
-            allColumnIds.push(column.colId);
-        });
-        gridOptions.columnApi.autoSizeColumns(allColumnIds);
+    var allColumnIds = [];
+    gridOptions.columnApi.getAllColumns().forEach(function (column) {
+        allColumnIds.push(column.colId);
     });
+    gridOptions.columnApi.autoSizeColumns(allColumnIds);
 
     // document.querySelector('#btnExportCSV').addEventListener('click', function () {
     //     var params = {
     //         fileName: 'Full Simulated Data'
     //     };
-    
+
     //     gridOptions.api.exportDataAsCsv(params);
     // });
 }

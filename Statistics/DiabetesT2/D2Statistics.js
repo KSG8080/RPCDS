@@ -112,13 +112,11 @@ function displayDAData() {
 
     gridOptions.api.setRowData(statistics);
 
-    document.querySelector('#btnAutoSize').addEventListener('click', function () {
-        var allColumnIds = [];
+    var allColumnIds = [];
         gridOptions.columnApi.getAllColumns().forEach(function (column) {
             allColumnIds.push(column.colId);
         });
         gridOptions.columnApi.autoSizeColumns(allColumnIds);
-    });
 
     // document.querySelector('#btnExportCSV').addEventListener('click', function () {
     //     var params = {

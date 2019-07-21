@@ -8,6 +8,9 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <link rel="stylesheet" type="text/css" href="normalize.css" />
     <link rel="stylesheet" type="text/css" href="mainCSS.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 
     <title>dtools: Home</title>
 </head>
@@ -23,9 +26,14 @@
         </div>
     </div>
 
+    <div>
+        <h1 style="text-align: center">Welcome to dtools</h1>
+        <p style="text-align: center">dtools is a web application which allows users to simulate and generate patients with various conditions.</p>
+    </div>
+
     <div id="main">
         <main>
-            <button id="simulateBtn">Simulate</button> <label id="wait"></label>
+            <button type="button" id="simulateBtn" class="btn btn-primary">Simulate</button> <label id="wait"></label>
         </main>
     </div>
 

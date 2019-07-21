@@ -20,8 +20,6 @@ function assignDeprevation(data) {
             data[i].SIMD16_Rank = JSONString[random].SIMD16_Rank;
             storeData(data);
         }
-        window.alert("Data simulation has been complete!");
-        let textLabel = document.getElementById('wait');
-        textLabel.textContent = "Complete!";
+        window.location.replace("https://devweb2018.cis.strath.ac.uk/~cxb15176/RPCDS/simulatedData.html");
     });
 }
