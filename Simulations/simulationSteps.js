@@ -5,7 +5,7 @@ document.getElementById("simulateBtn").addEventListener("click", function(){
 });
 
 function simulate() {
-    let populationSize = 1000;
+    let populationSize = 2000;
     let dataSet = [];
 
     localStorage.clear();
@@ -24,6 +24,11 @@ function simulate() {
     assignDeprevation(dataSet);
     simulateCnR(dataSet);
     simulateDotSnST(dataSet);
+    simulateGA(dataSet);
+    simulateDA(dataSet);
+    simulateDi1(dataSet);
+    simulateDi2(dataSet);
+    simulateHT(dataSet);
     storeData(dataSet);
 
     console.log(dataSet.length);
