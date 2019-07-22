@@ -122,11 +122,11 @@ function displayData() {
         });
         gridOptions.columnApi.autoSizeColumns(allColumnIds);
 
-    // document.querySelector('#btnExportCSV').addEventListener('click', function () {
-    //     var params = {
-    //         fileName: 'C&R Simulated Data',
-    //     };
+    document.querySelector('#btnExportCSV').addEventListener('click', function () {
+        var params = {
+            fileName: 'dtools - General Abnormal Conditions Statistics',
+        };
     
-    //     gridOptions.api.exportDataAsCsv(params);
-    // });
+        gridOptions.api.exportDataAsCsv(params);
+    });
 }

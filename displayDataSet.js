@@ -49,11 +49,11 @@ function displayData() {
     });
     gridOptions.columnApi.autoSizeColumns(allColumnIds);
 
-    // document.querySelector('#btnExportCSV').addEventListener('click', function () {
-    //     var params = {
-    //         fileName: 'Full Simulated Data'
-    //     };
+    document.querySelector('#btnExportCSV').addEventListener('click', function () {
+        var params = {
+            fileName: 'dtools - Full Simulated Data'
+        };
 
-    //     gridOptions.api.exportDataAsCsv(params);
-    // });
+        gridOptions.api.exportDataAsCsv(params);
+    });
 }
