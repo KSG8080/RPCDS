@@ -40,6 +40,10 @@ function chart() {
                         labelString: "Age Groups"
                     }
                 }]
+            },
+            title: {
+                display: true,
+                text: 'Diabetes Type 1 Statistics'
             }
         }
     });

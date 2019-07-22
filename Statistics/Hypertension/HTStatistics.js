@@ -40,6 +40,10 @@ function chart() {
                         labelString: "Age Groups"
                     }
                 }]
+            },
+            title: {
+                display: true,
+                text: 'Hypertension Statistics'
             }
         }
     });
