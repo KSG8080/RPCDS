@@ -80,6 +80,13 @@ tr:nth-child(even) {
     color: #5e9cd3;
 }
 
+.padding {
+    padding-left: 1vw;
+    padding-right: 1vw;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+}
+
 #footerBar {
     max-height: 100vh;
     max-width: 100vw;
