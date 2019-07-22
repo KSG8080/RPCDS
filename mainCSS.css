@@ -87,6 +87,10 @@ tr:nth-child(even) {
     padding-bottom: 1vh;
 }
 
+.btn-l {
+    width: 40vw;
+}
+
 #footerBar {
     max-height: 100vh;
     max-width: 100vw;
